@@ -23,9 +23,10 @@ a {
 // header
 
 .header {
-  background-color: config.$secondary-color;
+  background-color: config.$primary-color;
 
-  font-size: 1.125rem;
+  // font-size: 1.125rem;
+  font-size: 10px;
 
   .header-content {
     height: 60px;
@@ -45,20 +46,21 @@ a {
   }
 }
 
-// main banner
+// main banner lower
 
 .banner {
   height: 67vw;
   max-height: 616px;
-  background-color: config.$secondary-color;
+  background-color: config.$primary-color;
 
   .banner-lower {
     height: 67vw;
     max-height: 616px;
-
+    max-width: 1150px;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    margin: auto;
 
     img {
       max-width: 920px;
@@ -77,8 +79,12 @@ a {
     display: block;
     width: 5vw;
     height: 5vw;
+    max-width: 47px;
+    max-height: 47px;
     border-radius: 50%;
-
+    position: relative;
+    left: 5vw;
+    bottom: 45vw;
     background-color: config.$secondary-color;
     background-image: linear-gradient(
       -135deg,
@@ -110,8 +116,12 @@ a {
     display: block;
     width: 3vw;
     height: 3vw;
+    max-width: 27px;
+    max-height: 27px;
     border-radius: 50%;
-
+    position: relative;
+    right: 8vw;
+    bottom: 14vw;
     background-color: config.$secondary-color;
     background-image: linear-gradient(
       -135deg,
@@ -123,8 +133,109 @@ a {
 
 @media (min-width: 933px) {
   .banner {
+    .ball-1 {
+      bottom: 420px;
+    }
     .ball-2 {
       bottom: 31px;
     }
+
+    .ball-3 {
+      bottom: 130px;
+    }
   }
+}
+
+// Main banner upper
+
+.banner-upper {
+  height: 67vw;
+  max-height: 616px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  bottom: 67vw;
+
+  .banner-upper-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 0 5px 15px;
+  }
+
+  .banner-upper-left-top {
+    width: 30vw;
+    height: 65px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 0 8px 0 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    .greet-text {
+      font-size: 10px;
+      padding-bottom: 5px;
+    }
+    .name {
+      font-size: 14px;
+    }
+  }
+
+  .banner-upper-left-bottom {
+    width: 30vw;
+    font-size: 10px;
+    padding: 6px;
+
+    .school {
+      padding: 2px 0;
+    }
+  }
+}
+
+.banner-upper {
+  img {
+    width: 36px;
+  }
+}
+
+// Banner Upper Right
+
+.banner-upper-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 10px 23px 0;
+
+  .banner-upper-right-top {
+    width: 33vw;
+    background-color: #fff;
+    border-radius: 10px;
+    font-size: 10px;
+    padding: 9px 12px;
+
+    .lang-show {
+      padding: 4px 0;
+      display: flex;
+      justify-content: space-between;
+
+      img {
+        width: auto;
+        height: 12px;
+      }
+    }
+  }
+
+  .btn-banner {
+    height: 30px;
+    width: 86px;
+  }
+}
+
+// Portfolio
+
+.portfolio {
+  background-color: config.$secondary-color;
+  height: 200px;
 }

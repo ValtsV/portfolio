@@ -3,3 +3,17 @@
 $primary-color: #edf2f8;
 $secondary-color: #d2dbe8;
 $alternative-color: #454cab;
+
+// Buttons
+
+.btn {
+  background-color: $alternative-color;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  z-index: 2;
+
+  &:hover {
+    scale: (1.05);
+  }
+}
