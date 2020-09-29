@@ -30,7 +30,7 @@ a {
 
   .header-content {
     height: 60px;
-    max-width: 1150px;
+    max-width: 1050px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -42,6 +42,17 @@ a {
     li {
       display: inline-block;
       padding-left: 1.5rem;
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  .header {
+    font-size: 1rem;
+
+    .header-content {
+      align-items: flex-end;
+      padding-bottom: 5px;
     }
   }
 }
@@ -152,51 +163,65 @@ a {
   height: 67vw;
   max-height: 616px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   position: relative;
   bottom: 67vw;
 
   .banner-upper-left {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    padding: 20px 0 5px 15px;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100%;
+    margin-left: 10px;
+    margin-right: 3vw;
+    width: 33vw;
+  }
+
+  .banner-upper-left-middle {
+    height: 24vw;
   }
 
   .banner-upper-left-top {
-    width: 30vw;
-    height: 65px;
+    width: calc(54px + 15vw);
+    height: calc(33px + 9vw);
     background-color: #fff;
     border-radius: 10px;
     padding: 0 8px 0 6px;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    margin-top: 6vw;
 
     .greet-text {
-      font-size: 10px;
+      font-size: calc(5px + 1.4vw);
       padding-bottom: 5px;
     }
     .name {
-      font-size: 14px;
+      font-size: calc(7px + 1.9vw);
     }
   }
 
   .banner-upper-left-bottom {
-    width: 30vw;
-    font-size: 10px;
-    padding: 6px;
+    margin-top: 1vw;
+    width: calc(54px + 15vw);
+    font-size: calc(5px + 1.4vw);
+    padding: calc(3px + 0.8vw);
 
     .school {
-      padding: 2px 0;
+      padding: 0.8vw 0;
     }
   }
 }
 
 .banner-upper {
   img {
-    width: 36px;
+    width: calc(18px + 5vw);
   }
+}
+
+.banner-upper-center {
+  width: 33vw;
 }
 
 // Banner Upper Right
@@ -204,32 +229,156 @@ a {
 .banner-upper-right {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
-  padding: 0px 10px 23px 0;
+  margin-right: 3vw;
+  width: 33vw;
+  margin-left: 3vw;
 
   .banner-upper-right-top {
-    width: 33vw;
+    width: calc(60px + 16.5vw);
+    height: calc(52px + 14.4vw);
     background-color: #fff;
     border-radius: 10px;
-    font-size: 10px;
-    padding: 9px 12px;
+    font-size: calc(5px + 1.4vw);
+    padding: 2.5vw 3.3vw;
+    padding: calc(4.5px + 1.25vw) calc(6px + 1.66vw);
 
     .lang-show {
-      padding: 4px 0;
+      padding: calc(2px + 0.5vw) 0;
       display: flex;
       justify-content: space-between;
 
       img {
         width: auto;
-        height: 12px;
+        height: calc(6px + 1.66vw);
       }
     }
   }
 
+  .banner-upper-middle {
+    height: 29vw;
+  }
+
+  .banner-upper-right-bottom {
+    margin-bottom: 7vw;
+  }
+
   .btn-banner {
-    height: 30px;
-    width: 86px;
+    height: calc(15px + 4.16vw);
+    width: calc(43px + 11.94vw);
+    font-size: calc(5px + 1.5vw);
+  }
+}
+// //////////////////////////////////////////////////////////
+
+@media (min-width: 933px) {
+  .banner-upper {
+    bottom: 625px;
+
+    .banner-upper-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
+      height: 100%;
+      margin-left: 10px;
+      margin-right: 28px;
+      width: 280px;
+    }
+
+    .banner-upper-left-middle {
+      height: 224px;
+    }
+
+    .banner-upper-left-top {
+      width: 194px;
+      height: 117px;
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 0 8px 0 6px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      margin-top: 56px;
+
+      .greet-text {
+        font-size: 1.125rem;
+        padding-bottom: 5px;
+      }
+      .name {
+        font-size: 1.565rem;
+      }
+    }
+
+    .banner-upper-left-bottom {
+      margin-top: 10px;
+      width: 194px;
+      font-size: 1.125rem;
+      padding: 10.5px;
+
+      .school {
+        padding: 7.5px 0;
+      }
+    }
+  }
+
+  .banner-upper {
+    img {
+      width: 64.7px;
+    }
+  }
+
+  .banner-upper-center {
+    width: 280px;
+  }
+
+  // Banner Upper Right
+
+  .banner-upper-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 3vw;
+    width: 280px;
+    margin-left: 28px;
+
+    .banner-upper-right-top {
+      width: 254px;
+      height: 186.5px;
+      background-color: #fff;
+      border-radius: 10px;
+      font-size: 1.125rem;
+      // padding: 2.5vw 3.3vw;
+      // padding: calc(4.5px + 1.25vw) calc(6px + 1.66vw);
+      padding: 16px 21.5px;
+
+      .lang-show {
+        padding: 7px;
+        display: flex;
+        justify-content: space-between;
+
+        img {
+          width: auto;
+          height: 24px;
+        }
+      }
+    }
+
+    .banner-upper-middle {
+      height: 270.5px;
+    }
+
+    .banner-upper-right-bottom {
+      margin-bottom: 65px;
+    }
+
+    .btn-banner {
+      height: 54px;
+      width: 154.5px;
+      font-size: 1.19rem;
+    }
   }
 }
 
