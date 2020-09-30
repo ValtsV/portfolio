@@ -11,13 +11,13 @@
     <title>Valts Vilcans</title>
   </head>
   <body>
-    <header class="header">
+    <header class="header" id="header">
       <div class="header-content">
         <span>Valts Vilcans</span>
         <ul class="nav-list">
-          <li class="nav-list-el"><a href="#">Proyectos</a></li>
-          <li class="nav-list-el"><a href="#">Curriculum</a></li>
-          <li class="nav-list-el"><a href="#">Contacto</a></li>
+          <li class="nav-list-el"><a href="#portfolio">Proyectos</a></li>
+          <li class="nav-list-el"><a href="#curriculum">Curriculum</a></li>
+          <li class="nav-list-el"><a href="#contact-form">Contacto</a></li>
         </ul>
       </div>
     </header>
@@ -28,7 +28,7 @@
         </div>
         <div class="banner-lower-center">
           <div class="ball-2">
-            <img src="ptfmeRes.png" alt="me" />
+            <img src="img/ptfmeRes.png" alt="me" />
           </div>
         </div>
         <div class="banner-lower-right">
@@ -38,7 +38,7 @@
       <div class="banner-upper">
         <div class="banner-upper-left">
           <div class="banner-upper-left-top">
-            <img src="greet.png" alt="greeting-hand" />
+            <img src="img/greet.png" alt="greeting-hand" />
             <div>
               <p class="greet-text">Me llamo</p>
               <p class="name">Valts</p>
@@ -57,28 +57,30 @@
             <div class="lang-show">
               <span>JS, React</span>
               <div>
-                <img src="Jslogo.png" alt="js logo" />
-                <img src="reactIcon.png" alt="react logo" />
+                <img src="img/Jslogo.png" alt="js logo" />
+                <img src="img/reactIcon.png" alt="react logo" />
               </div>
             </div>
             <div class="lang-show">
-              <span>NodeJS</span><img src="nodeLogo.png" alt="node logo" />
+              <span>NodeJS</span><img src="img/nodeLogo.png" alt="node logo" />
             </div>
             <div class="lang-show">
-              <span>NoSQL</span><img src="MongoLogo.png" alt="mongo logo" />
+              <span>NoSQL</span><img src="img/MongoLogo.png" alt="mongo logo" />
             </div>
             <div class="lang-show">
-              <span>SCSS</span><img src="sassLogo.png" alt="sass logo" />
+              <span>SCSS</span><img src="img/sassLogo.png" alt="sass logo" />
             </div>
           </div>
           <div class="banner-upper-middle"></div>
           <div class="banner-upper-right-bottom">
-            <button class="btn btn-banner">Proyectos</button>
+            <a href="#portfolio"
+              ><button class="btn btn-banner">Proyectos</button></a
+            >
           </div>
         </div>
       </div>
     </section>
-    <section class="portfolio">
+    <section class="portfolio" id="portfolio">
       <p class="section-title">Portfolio</p>
       <div class="pf-content">
         <div class="pf-content-desc">
@@ -93,9 +95,15 @@
               comentarios.
             </p>
           </div>
-          <button class="btn btn-portfolio">Visitar</button>
+          <a href="https://hidden-temple-22278.herokuapp.com/" target="_blank"
+            ><button class="btn btn-portfolio">Visitar</button></a
+          >
         </div>
-        <img src="socNetImgS.png" alt="social network" class="pf-content-img" />
+        <img
+          src="img/socNetImgS.png"
+          alt="social network"
+          class="pf-content-img"
+        />
       </div>
       <div class="pf-content">
         <div class="pf-content-desc">
@@ -107,9 +115,11 @@
               FireBase Auth, carrito dinamico y Stripe Checkout
             </p>
           </div>
-          <button class="btn btn-portfolio">Visitar</button>
+          <a href="https://e-store-qwe-qwe.herokuapp.com" target="_blank"
+            ><button class="btn btn-portfolio">Visitar</button></a
+          >
         </div>
-        <img src="shopImgS.png" alt="shop preview" class="pf-content-img" />
+        <img src="img/shopImgS.png" alt="shop preview" class="pf-content-img" />
       </div>
       <div class="pf-content">
         <div class="pf-content-desc">
@@ -120,12 +130,14 @@
               Pagina web para restaurante local responsiva
             </p>
           </div>
-          <button class="btn btn-portfolio">Visitar</button>
+          <a href="https://www.picantoncaceres.es/" target="_blank"
+            ><button class="btn btn-portfolio">Visitar</button></a
+          >
         </div>
-        <img src="picantonImgS.png" alt="picanton" class="pf-content-img" />
+        <img src="img/picantonImgS.png" alt="picanton" class="pf-content-img" />
       </div>
     </section>
-    <section class="curriculum">
+    <section class="curriculum" id="curriculum">
       <p class="section-title">Curriculum</p>
       <div class="curr-grid">
         <div class="grid-info">
@@ -150,7 +162,9 @@
             </div>
           </div>
           <div class="grid-info-btn">
-            <button class="btn btn-curriculum">Contactar</button>
+            <a href="#contact-form">
+              <button class="btn btn-curriculum">Contactar</button></a
+            >
           </div>
         </div>
         <div class="grid-hobbies">
@@ -201,7 +215,34 @@
         </div>
       </div>
     </section>
-    <section class="contact"></section>
-    <footer class="footer"></footer>
+    <section class="contact">
+      <p class="section-title">Contacto</p>
+      <div class="contact-form" id="contact-form">
+        <form method="POST" name="contact" data-netlify="true">
+          <label for="email">Correo:</label>
+          <input
+            type="text"
+            id="email"
+            name="Email"
+            class="email-input"
+            required
+          />
+          <label for="message">Mensaje:</label>
+          <input
+            type="textarea"
+            id="message"
+            name="message"
+            class="message-input"
+            required
+          />
+          <button type="submit" class="btn btn-contact">Enviar</button>
+        </form>
+      </div>
+    </section>
+    <footer class="footer">
+      <p class="footer-text">
+        Has llegado hasta el fin! <a href="#header"> Subir arriba?</a>
+      </p>
+    </footer>
   </body>
 </html>

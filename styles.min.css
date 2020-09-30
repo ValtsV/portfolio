@@ -15,6 +15,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #edf2f8;
   font-family: "B612", sans-serif;
@@ -357,8 +361,10 @@ a {
   width: 90%;
   border-radius: 10px;
 }
-.portfolio .pf-content .btn-portfolio {
+.portfolio .pf-content a {
   align-self: flex-end;
+}
+.portfolio .pf-content .btn-portfolio {
   width: 120px;
   height: 40px;
   font-size: 0.9rem;
@@ -411,7 +417,7 @@ a {
   justify-content: center;
   grid-template-columns: 98vw;
   grid-template-rows: auto;
-  padding-bottom: 40px;
+  padding-bottom: 50px;
 }
 .curr-grid .grid-info {
   grid-column-start: 1;
@@ -424,14 +430,7 @@ a {
   padding: 1rem 2rem;
 }
 .curr-grid .grid-hobbies {
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 3;
-  grid-row-end: 4;
   display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 1rem 2rem;
 }
 .curr-grid .grid-hobbies .grid-text {
   padding: 0.5rem 0;
@@ -505,118 +504,33 @@ a {
 
 @media (min-width: 620px) {
   .curr-grid {
-    display: grid;
-    justify-content: center;
     grid-template-columns: 92vw;
-    grid-template-rows: auto;
-    padding-bottom: 40px;
   }
   .curr-grid .grid-info {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     padding: 1rem 2.5rem;
-  }
-  .curr-grid .grid-hobbies {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 3;
-    grid-row-end: 4;
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 1rem 2.5rem;
-  }
-  .curr-grid .grid-hobbies .grid-text {
-    padding: 0.5rem 0;
   }
   .curr-grid .grid-info-text {
     display: flex;
-    justify-content: space-around;
   }
   .curr-grid .grid-info-text-left,
 .curr-grid .grid-info-text-right {
     width: 50%;
   }
   .curr-grid .grid-education {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 2;
-    grid-row-end: 3;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     padding: 1rem 2.5rem;
   }
   .curr-grid .grid-experience {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 3;
-    grid-row-end: 4;
-    display: flex;
-    flex-direction: column;
     padding: 1rem 2.5rem;
-  }
-  .curr-grid .grid-title {
-    font-size: 0.75rem;
-    margin: 1rem 0 0.7rem 0;
-    color: #a5a5a5;
-  }
-  .curr-grid .grid-title-edu {
-    margin-bottom: 1.5rem;
-  }
-  .curr-grid .grid-text {
-    font-size: 1.1rem;
-  }
-  .curr-grid .grid-text-hob {
-    margin: 2.5px 0;
-  }
-  .curr-grid .grid-date {
-    margin: 0.8rem 0 1.8rem 0;
-    font-size: 0.75rem;
-    color: #a5a5a5;
-  }
-  .curr-grid .grid-info-btn {
-    align-self: flex-end;
-  }
-  .curr-grid .btn-curriculum {
-    width: 120px;
-    height: 35px;
-    font-size: 0.925rem;
-    margin-bottom: 10px;
-    position: relative;
-    bottom: 15px;
-  }
-
-  .grid-info,
-.grid-hobbies,
-.grid-education,
-.grid-experience {
-    background-color: #fff;
-    border-radius: 10px;
-    margin: 10px;
   }
 }
 @media (min-width: 768px) {
   .curr-grid {
-    display: grid;
-    justify-content: center;
     grid-template-columns: 33.3vw 63.3vw;
     grid-template-rows: 40.1vw 21.4vw 32.7vw;
-    padding-bottom: 40px;
   }
   .curr-grid .grid-info {
-    grid-column-start: 1;
-    grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 3;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     padding: 1.71vw 4.29vw;
   }
   .curr-grid .grid-hobbies {
@@ -637,9 +551,6 @@ a {
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     padding: 1.71vw 4.29vw;
   }
   .curr-grid .grid-experience {
@@ -647,13 +558,10 @@ a {
     grid-column-end: 3;
     grid-row-start: 2;
     grid-row-end: 4;
-    display: flex;
-    flex-direction: column;
     padding: 1.71vw 4.29vw;
   }
   .curr-grid .grid-info-text {
     display: block;
-    justify-content: space-around;
   }
   .curr-grid .grid-info-text-left,
 .curr-grid .grid-info-text-right {
@@ -662,7 +570,6 @@ a {
   .curr-grid .grid-title {
     font-size: 1.28vw;
     margin: 1.71vw 0 1.2vw 0;
-    color: #a5a5a5;
   }
   .curr-grid .grid-title-edu {
     margin-bottom: 2.57vw;
@@ -676,78 +583,36 @@ a {
   .curr-grid .grid-date {
     margin: 1.37vw 0 3.09vw 0;
     font-size: 1.28vw;
-    color: #a5a5a5;
-  }
-  .curr-grid .grid-info-btn {
-    align-self: flex-end;
   }
   .curr-grid .btn-curriculum {
-    width: 120px;
-    height: 35px;
     font-size: 1.45vw;
     margin-bottom: 1.07vw;
     bottom: 0px;
   }
-
-  .grid-info,
-.grid-hobbies,
-.grid-education,
-.grid-experience {
-    background-color: #fff;
-    border-radius: 10px;
-    margin: 10px;
-  }
 }
 @media (min-width: 933px) {
   .curr-grid {
-    display: grid;
-    justify-content: center;
     grid-template-columns: 310px 590px;
     grid-template-rows: 370px 195px 300px;
-    padding-bottom: 40px;
   }
   .curr-grid .grid-info {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 3;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     padding: 1rem 2.5rem;
   }
   .curr-grid .grid-hobbies {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 3;
-    grid-row-end: 4;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     padding: 1rem 2.5rem;
   }
   .curr-grid .grid-hobbies .grid-text {
     padding: 0.5rem 0;
   }
   .curr-grid .grid-education {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     padding: 1rem 2.5rem;
   }
   .curr-grid .grid-experience {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 4;
-    display: flex;
-    flex-direction: column;
     padding: 1rem 2.5rem;
   }
   .curr-grid .grid-title {
     font-size: 0.75rem;
     margin: 1rem 0 0.7rem 0;
-    color: #a5a5a5;
   }
   .curr-grid .grid-title-edu {
     margin-bottom: 1.5rem;
@@ -761,26 +626,52 @@ a {
   .curr-grid .grid-date {
     margin: 0.8rem 0 1.8rem 0;
     font-size: 0.75rem;
-    color: #a5a5a5;
-  }
-  .curr-grid .grid-info-btn {
-    align-self: flex-end;
   }
   .curr-grid .btn-curriculum {
-    width: 120px;
-    height: 35px;
     font-size: 0.925rem;
     margin-bottom: 10px;
   }
+}
+.contact {
+  background-color: #d2dbe8;
+  padding-bottom: 50px;
+}
 
-  .grid-info,
-.grid-hobbies,
-.grid-education,
-.grid-experience {
-    background-color: #fff;
-    border-radius: 10px;
-    margin: 10px;
-  }
+.contact-form {
+  width: 93vw;
+  max-width: 400px;
+  margin: auto;
+}
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+.contact-form input {
+  font-size: 1rem;
+  padding: 10px;
+  margin: 25px 0;
+  border-radius: 10px;
+  border: none;
+}
+.contact-form .message-input {
+  height: 150px;
+}
+.contact-form .btn-contact {
+  width: 33%;
+  height: 40px;
+  align-self: flex-end;
+  font-size: 0.9rem;
+}
+
+.footer-text {
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+  padding: 20px;
+  font-size: 1.2rem;
+}
+.footer-text a {
+  color: #454cab;
 }
 
 /*# sourceMappingURL=styles.min.css.map */
