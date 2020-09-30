@@ -350,8 +350,6 @@ a {
       background-color: #fff;
       border-radius: 10px;
       font-size: 1.125rem;
-      // padding: 2.5vw 3.3vw;
-      // padding: calc(4.5px + 1.25vw) calc(6px + 1.66vw);
       padding: 16px 21.5px;
 
       .lang-show {
@@ -387,7 +385,7 @@ a {
 .section-title {
   font-size: 20px;
   text-align: center;
-  padding-top: 30px;
+  padding: 30px 0;
 }
 
 .portfolio {
@@ -400,7 +398,7 @@ a {
     justify-content: center;
     align-items: center;
     gap: 30px;
-    margin: 30px 0;
+    margin: 0 0 30px 0;
 
     .pf-content-title {
       font-size: 1.5rem;
@@ -439,14 +437,14 @@ a {
   .section-title {
     font-size: 36px;
     text-align: center;
-    padding-top: 50px;
+    padding: 50px 0;
   }
 
   .portfolio {
     .pf-content {
       flex-direction: row;
       gap: 8vw;
-      margin: 50px 40px;
+      margin: 0 40px 50px 40px;
 
       .pf-content-desc {
         width: 40vw;
@@ -472,7 +470,7 @@ a {
   .portfolio {
     .pf-content {
       gap: 80px;
-      margin: 50px 0;
+      margin: 0 0 50px 0;
 
       .pf-content-desc {
         width: 400px;
@@ -486,5 +484,444 @@ a {
         margin-top: 20px;
       }
     }
+  }
+}
+
+// Curriculum
+
+.curr-grid {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 98vw;
+  grid-template-rows: auto;
+
+  padding-bottom: 40px;
+
+  .grid-info {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+  }
+
+  .grid-hobbies {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+
+    .grid-text {
+      padding: 0.5rem 0;
+    }
+  }
+
+  .grid-info-text {
+    display: block;
+
+    justify-content: space-around;
+  }
+
+  .grid-info-text-left,
+  .grid-info-text-right {
+    width: 100%;
+  }
+
+  .grid-education {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+  }
+
+  .grid-experience {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem;
+  }
+
+  .grid-title {
+    font-size: 0.75rem;
+    margin: 1rem 0 0.7rem 0;
+    color: #a5a5a5;
+  }
+
+  .grid-title-edu {
+    margin-bottom: 1.5rem;
+  }
+
+  .grid-text {
+    font-size: 1.1rem;
+  }
+
+  .grid-text-hob {
+    margin: 2.5px 0;
+  }
+
+  .grid-date {
+    margin: 0.8rem 0 1.8rem 0;
+    font-size: 0.75rem;
+    color: #a5a5a5;
+  }
+
+  .grid-info-btn {
+    align-self: flex-end;
+  }
+
+  .btn-curriculum {
+    width: 120px;
+    height: 35px;
+    font-size: 0.925rem;
+    margin-bottom: 10px;
+    position: relative;
+    bottom: 15px;
+  }
+}
+
+.grid-info,
+.grid-hobbies,
+.grid-education,
+.grid-experience {
+  background-color: #fff;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+@media (min-width: 620px) {
+  .curr-grid {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 92vw;
+    grid-template-rows: auto;
+
+    padding-bottom: 40px;
+
+    .grid-info {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 1;
+      grid-row-end: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 1rem 2.5rem;
+    }
+
+    .grid-hobbies {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 3;
+      grid-row-end: 4;
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 1rem 2.5rem;
+
+      .grid-text {
+        padding: 0.5rem 0;
+      }
+    }
+
+    .grid-info-text {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .grid-info-text-left,
+    .grid-info-text-right {
+      width: 50%;
+    }
+
+    .grid-education {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 2;
+      grid-row-end: 3;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 1rem 2.5rem;
+    }
+
+    .grid-experience {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 3;
+      grid-row-end: 4;
+      display: flex;
+      flex-direction: column;
+      padding: 1rem 2.5rem;
+    }
+
+    .grid-title {
+      font-size: 0.75rem;
+      margin: 1rem 0 0.7rem 0;
+      color: #a5a5a5;
+    }
+
+    .grid-title-edu {
+      margin-bottom: 1.5rem;
+    }
+
+    .grid-text {
+      font-size: 1.1rem;
+    }
+
+    .grid-text-hob {
+      margin: 2.5px 0;
+    }
+
+    .grid-date {
+      margin: 0.8rem 0 1.8rem 0;
+      font-size: 0.75rem;
+      color: #a5a5a5;
+    }
+
+    .grid-info-btn {
+      align-self: flex-end;
+    }
+
+    .btn-curriculum {
+      width: 120px;
+      height: 35px;
+      font-size: 0.925rem;
+      margin-bottom: 10px;
+      position: relative;
+      bottom: 15px;
+    }
+  }
+
+  .grid-info,
+  .grid-hobbies,
+  .grid-education,
+  .grid-experience {
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 10px;
+  }
+}
+
+@media (min-width: 768px) {
+  .curr-grid {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 33.3vw 63.3vw;
+    grid-template-rows: 40.1vw 21.4vw 32.7vw;
+
+    padding-bottom: 40px;
+
+    .grid-info {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 1;
+      grid-row-end: 3;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 1.71vw 4.29vw;
+    }
+
+    .grid-hobbies {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 3;
+      grid-row-end: 4;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 1.71vw 4.29vw;
+
+      .grid-text {
+        padding: 0.85vw 0;
+      }
+    }
+
+    .grid-education {
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 1.71vw 4.29vw;
+    }
+
+    .grid-experience {
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 2;
+      grid-row-end: 4;
+      display: flex;
+      flex-direction: column;
+      padding: 1.71vw 4.29vw;
+    }
+
+    .grid-info-text {
+      display: block;
+      justify-content: space-around;
+    }
+
+    .grid-info-text-left,
+    .grid-info-text-right {
+      width: 100%;
+    }
+
+    .grid-title {
+      font-size: 1.28vw;
+      margin: 1.71vw 0 1.2vw 0;
+      color: #a5a5a5;
+    }
+
+    .grid-title-edu {
+      margin-bottom: 2.57vw;
+    }
+
+    .grid-text {
+      font-size: 1.88vw;
+    }
+
+    .grid-text-hob {
+      margin: 0.26vw 0;
+    }
+
+    .grid-date {
+      margin: 1.37vw 0 3.09vw 0;
+      font-size: 1.28vw;
+      color: #a5a5a5;
+    }
+
+    .grid-info-btn {
+      align-self: flex-end;
+    }
+
+    .btn-curriculum {
+      width: 120px;
+      height: 35px;
+      font-size: 1.45vw;
+      margin-bottom: 1.07vw;
+      bottom: 0px;
+    }
+  }
+
+  .grid-info,
+  .grid-hobbies,
+  .grid-education,
+  .grid-experience {
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 10px;
+  }
+}
+
+@media (min-width: 933px) {
+  .curr-grid {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 310px 590px;
+    grid-template-rows: 370px 195px 300px;
+    padding-bottom: 40px;
+
+    .grid-info {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 1;
+      grid-row-end: 3;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 1rem 2.5rem;
+    }
+
+    .grid-hobbies {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 3;
+      grid-row-end: 4;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 1rem 2.5rem;
+
+      .grid-text {
+        padding: 0.5rem 0;
+      }
+    }
+
+    .grid-education {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 1rem 2.5rem;
+    }
+
+    .grid-experience {
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 2;
+      grid-row-end: 4;
+      display: flex;
+      flex-direction: column;
+      padding: 1rem 2.5rem;
+    }
+
+    .grid-title {
+      font-size: 0.75rem;
+      margin: 1rem 0 0.7rem 0;
+      color: #a5a5a5;
+    }
+
+    .grid-title-edu {
+      margin-bottom: 1.5rem;
+    }
+
+    .grid-text {
+      font-size: 1.1rem;
+    }
+
+    .grid-text-hob {
+      margin: 2.5px 0;
+    }
+
+    .grid-date {
+      margin: 0.8rem 0 1.8rem 0;
+      font-size: 0.75rem;
+      color: #a5a5a5;
+    }
+
+    .grid-info-btn {
+      align-self: flex-end;
+    }
+
+    .btn-curriculum {
+      width: 120px;
+      height: 35px;
+      font-size: 0.925rem;
+      margin-bottom: 10px;
+    }
+  }
+
+  .grid-info,
+  .grid-hobbies,
+  .grid-education,
+  .grid-experience {
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 10px;
   }
 }
